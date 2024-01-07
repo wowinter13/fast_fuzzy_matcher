@@ -3,8 +3,6 @@
 require_relative "fuzzy_matcher/version"
 
 require 'ffi'
-require 'pry'
-require 'benchmark'
 
 module FuzzyMatcher
   class Error < StandardError; end
@@ -17,8 +15,8 @@ module FuzzyMatcher
   # @return [Array<String>] The strings in targets that fuzzy match source.
   #
   # @example
-  #  require 'fuzzy_matcher'
-  #  FuzzyMatcher.find("whl", ["cartwheel", "foobar", "wheel", "baz"])
+  #  require 'fast_fuzzy_matcher'
+  #  FuzzyMatch.find("whl", ["cartwheel", "foobar", "wheel", "baz"])
   #  => ["cartwheel", "wheel"]
   #
   # @note This method possibly is not thread safe.

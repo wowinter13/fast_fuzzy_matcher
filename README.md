@@ -1,4 +1,4 @@
-# FuzzyMatcher
+# FuzzyMatch
 
 This library is a work in progress. 
 
@@ -12,7 +12,7 @@ Find a needle in a haystack based on string similarity and regular expression ru
 Just pass an array of strings to the matcher and it will return the best match(es) for the given needle.
 
 ```ruby
-require 'fuzzy_matcher'
+require 'fast_fuzzy_matcher'
 
 FuzzyMatcher.find("whl", ["cartwheel", "foobar", "wheel", "baz"])
 => ["cartwheel", "wheel"]
@@ -34,17 +34,17 @@ Approximately 10-60x faster than the fastest Ruby implementation. The difference
 
 ## Documentation
 
-Detailed documentation is available at [rubydoc](https://rubydoc.info/gems/fuzzy_matcher).
+Detailed documentation is available at [rubydoc](https://rubydoc.info/gems/fast_fuzzy_matcher).
 
 ## Installation
 
-fuzzy_matcher is available as a gem, to install it just install the gem:
+fast_fuzzy_matcher is available as a gem, to install it just install the gem:
 
-    gem install fuzzy_matcher
+    gem install fast_fuzzy_matcher
 
 If you're using Bundler, add the gem to Gemfile.
 
-    gem 'fuzzy_matcher'
+    gem 'fast_fuzzy_matcher'
 
 Run `bundle install`.
 
@@ -55,7 +55,7 @@ Run `bundle install`.
 
 ## Contributing
 
-1. Fork it ( https://github.com/wowinter13/fuzzy_matcher/fork )
+1. Fork it ( https://github.com/wowinter13/fast_fuzzy_matcher/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

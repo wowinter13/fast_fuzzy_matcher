@@ -1,4 +1,4 @@
-module github.com/wowinter13/fuzzy_matcher
+module github.com/wowinter13/fast_fuzzy_matcher
 
 go 1.19
 

@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in fuzzy_matcher.gemspec
+# Specify your gem's dependencies in fast_fuzzy_matcher.gemspec
 gemspec
 
 gem "rake", "~> 13.0"

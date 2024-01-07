@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    fuzzy_matcher (0.1.1)
+    fast_fuzzy_matcher (0.2.0)
       ffi
 
 GEM
@@ -36,8 +36,8 @@ PLATFORMS
 
 DEPENDENCIES
   benchmark
+  fast_fuzzy_matcher!
   ffi (~> 1.16.0)
-  fuzzy_matcher!
   pry
   rake (~> 13.0)
   rspec (~> 3.0)
