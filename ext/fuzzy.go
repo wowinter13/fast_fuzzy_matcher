@@ -98,6 +98,13 @@ Outer:
 
 // Find will return a list of strings in targets that fuzzy matches source.
 //
+// The returned list will be ordered by best matches first, or nil if there are
+// no matches. The algorithm is optimized for matches where the target string
+// has a prefix that matches the source.
+//
+// FFI note: the returned list is allocated using malloc and must be freed using
+// free_cstrings.
+//
 //export Find
 func Find(source *C.char, targets **C.char, targetsLen C.int) **C.char {
 	goSource := C.GoString(source)

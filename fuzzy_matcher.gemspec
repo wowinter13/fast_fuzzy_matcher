@@ -5,20 +5,23 @@ require_relative "lib/fuzzy_matcher/version"
 Gem::Specification.new do |spec|
   spec.name = "fuzzy_matcher"
   spec.version = FuzzyMatcher::VERSION
-  spec.authors = ["wowinter13"]
+  spec.authors = ["Vlad Dyachenko"]
   spec.email = ["vla-dy@yandex.ru"]
 
-  spec.summary = "Fuzzy Matcher"
-  spec.description = "Fuzzy Matcher"
+  spec.summary = "fuzzy_matcher is the fastest fuzzy search library for Ruby."
+  spec.description = "A tiny and blazing-fast fuzzy search in pure Ruby with FFI bindings to Go."\
+                     "Fuzzy searching allows for flexibly matching a string with partial input, " \
+                     "useful for filtering data very quickly based on lightweight user input."
   spec.homepage = "https://github.com/wowinter13/fuzzy_matcher"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6.0"
 
-  spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
-
-  spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/wowinter13/fuzzy_matcher"
-  spec.metadata["changelog_uri"] = "https://github.com/wowinter13/fuzzy_matcher/blob/master/CHANGELOG.md"
+  spec.metadata    = {
+    'bug_tracker_uri'   => 'https://github.com/wowinter13/fuzzy_matcher/issues',
+    'changelog_uri'     => "https://github.com/wowinter13/fuzzy_matcher/blob/master/CHANGELOG.md",
+    'documentation_uri' => "https://www.rubydoc.info/github/wowinter13/fuzzy_matcher",
+    'source_code_uri'   => "https://github.com/wowinter13/fuzzy_matcher"
+  }
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
@@ -32,9 +35,7 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  # Uncomment to register a new dependency of your gem
-  # spec.add_dependency "example-gem", "~> 1.0"
+  spec.test_files = Dir['spec/**/*']
 
-  # For more information and examples about making a new gem, check out our
-  # guide at: https://bundler.io/guides/creating_gem.html
+  spec.add_dependency "ffi"
 end

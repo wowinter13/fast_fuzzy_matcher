@@ -1,7 +1,8 @@
 PATH
   remote: .
   specs:
-    fuzzy_matcher (0.1.0)
+    fuzzy_matcher (0.1.1)
+      ffi
 
 GEM
   remote: https://rubygems.org/

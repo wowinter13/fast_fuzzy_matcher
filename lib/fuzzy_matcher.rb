@@ -9,6 +9,22 @@ require 'benchmark'
 module FuzzyMatcher
   class Error < StandardError; end
 
+  # find() will return a list of strings in targets that fuzzy matches source.
+  #
+  # @param [String] source The string to match against.
+  # @param [Array<String>] targets The strings to match.
+  # 
+  # @return [Array<String>] The strings in targets that fuzzy match source.
+  #
+  # @example
+  #  require 'fuzzy_matcher'
+  #  FuzzyMatcher.find("whl", ["cartwheel", "foobar", "wheel", "baz"])
+  #  => ["cartwheel", "wheel"]
+  #
+  # @note This method possibly is not thread safe.
+  # @note This method is case sensitive. For case insensitive matching, downcase targets/source or use a case insensitive matcher (#find_fold)
+  #
+  # @see ext/fuzzy.go#Find for the implementation of this method.
   def self.find(source, targets)
     pointers = targets.map { |t| FFI::MemoryPointer.from_string(t) }
     targets_ptr = FFI::MemoryPointer.new(:pointer, targets.size)
